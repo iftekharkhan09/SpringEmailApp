@@ -13,8 +13,10 @@ public class MailSenderImpl implements com.spring.email.service.MailSender {
 	@Bean
 	public MailSender mailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-		mailSender.setHost("");
-		mailSender.setPort(25);
+		mailSender.setHost("smtp.gmail.com");
+		mailSender.setPort(465);
+		mailSender.setPassword("Prince@981");
+		mailSender.setUsername("iftekharkhan629@gmail.com");
 		return mailSender();
 	}
 }
