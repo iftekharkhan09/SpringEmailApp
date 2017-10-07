@@ -10,15 +10,17 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 @Configuration
 @ComponentScan(basePackages = "com.spring.email")
-public class MailSenderImpl {
+public class MailSenderService {
+	private final String mailId="**************@gmail.com";
+	private final String password="************";
 	@Bean
-	public MailSender mailSender() {
+	public JavaMailSenderImpl mailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 		// Using gmail
 		mailSender.setHost("smtp.gmail.com");
 		mailSender.setPort(587);
-		mailSender.setUsername("YOUR EMAIL ID");
-		mailSender.setPassword("YOUR PASSWORD");
+		mailSender.setUsername(mailId);
+		mailSender.setPassword(password);
 		Properties javaMailProperties = new Properties();
 		javaMailProperties.put("mail.smtp.starttls.enable", "true");
 		javaMailProperties.put("mail.smtp.auth", "true");
