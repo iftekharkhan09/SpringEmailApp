@@ -1,1 +1,3 @@
-/Git Code/SpringEmailApp/src/main/java/com/spring/email/App.java
+/Git Code/SpringEmailApp/src/main/java/com/spring/email/service/impl/MailSenderImpl.java
+/Git Code/SpringEmailApp/src/main/java/com/spring/email/controller/MailController.java
+/Git Code/SpringEmailApp/src/main/java/com/spring/email/SimpleEmailService.java

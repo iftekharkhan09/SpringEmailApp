@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 public class SimpleEmailService {
 	@Autowired
 	private org.springframework.mail.MailSender mailSender;
-	
+
 	public void sendEmail() {
-		SimpleMailMessage simpleMailMessage=new SimpleMailMessage();
+		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
 		simpleMailMessage.setTo("iftekharkhan245@gmail.com");
-		//simpleMailMessage.setCc("iftekharkhan245@gmail.com");
-		simpleMailMessage.setSubject("This is a test mail");
+		simpleMailMessage.setSubject("Test Mail");
+		simpleMailMessage.setText("This is a test mail");
 		mailSender.send(simpleMailMessage);
 	}
 }
