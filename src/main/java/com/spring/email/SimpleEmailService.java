@@ -34,7 +34,8 @@ public class SimpleEmailService {
 		simpleMailMessage.setText("This is a test mail");
 		mailSender.send(simpleMailMessage);
 	}
-
+	//hotfix commit 2..
+	
 	public void sendEmailWithAttachment() throws MessagingException {
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
