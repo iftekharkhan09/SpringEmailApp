@@ -32,6 +32,7 @@ public class MailSenderService {
 		mailSender.setJavaMailProperties(javaMailProperties);
 		return mailSender;
 	}
+	//master sunny added.
 
 	@Bean
     public SpringResourceTemplateResolver htmlTemplateResolver(){
