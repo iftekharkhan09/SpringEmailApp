@@ -16,5 +16,7 @@ public class MailController {
 		 //service.sendEmailWithRichContent();
 		service.sendEmailWithTemplate();
 		//few lines addded.
+		
+		//hotfix sunny added.
 	}
 }
