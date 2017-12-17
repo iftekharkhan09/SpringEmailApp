@@ -25,7 +25,6 @@ public class SimpleEmailService {
 	public SimpleEmailService(TemplateEngine thymaleaf) {
 		this.thymaleaf=thymaleaf;
 	}
-	//hotfix commit 1..
 
 
 	public void sendEmail() {
@@ -35,7 +34,6 @@ public class SimpleEmailService {
 		simpleMailMessage.setText("This is a test mail");
 		mailSender.send(simpleMailMessage);
 	}
-	//hotfix commit 2..
 	
 	public void sendEmailWithAttachment() throws MessagingException {
 		MimeMessage message = mailSender.createMimeMessage();
@@ -48,7 +46,7 @@ public class SimpleEmailService {
 		helper.addAttachment("coupon.png", fileSystemResource);
 		mailSender.send(message);
 	}
-	//hotfix commit 3..
+
 	
 	public void sendEmailWithRichContent() throws MessagingException {
 		MimeMessage message=mailSender.createMimeMessage();
@@ -62,7 +60,7 @@ public class SimpleEmailService {
 		mailSender.send(message);
 	}	
 	
-	//hotfix commit 4..
+	//babu added...
 	
 	public void sendEmailWithTemplate() throws MessagingException {
 		Context context=new Context();
