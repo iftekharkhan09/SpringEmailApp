@@ -47,7 +47,7 @@ public class SimpleEmailService {
 		helper.addAttachment("coupon.png", fileSystemResource);
 		mailSender.send(message);
 	}
-	//hotfix commit 2..
+	//hotfix commit 3..
 	
 	public void sendEmailWithRichContent() throws MessagingException {
 		MimeMessage message=mailSender.createMimeMessage();
@@ -60,6 +60,8 @@ public class SimpleEmailService {
 		messageHelper.addInline("logo", fileSystemResource);
 		mailSender.send(message);
 	}	
+	
+	//hotfix commit 4..
 	
 	public void sendEmailWithTemplate() throws MessagingException {
 		Context context=new Context();
