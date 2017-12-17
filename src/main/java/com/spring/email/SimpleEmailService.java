@@ -26,6 +26,7 @@ public class SimpleEmailService {
 		this.thymaleaf=thymaleaf;
 	}
 	//Commit No 1 in Develop...
+	//Commit No 2 in Develop...
 
 	public void sendEmail() {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
