@@ -15,5 +15,6 @@ public class MailController {
 		// service.sendEmailWithAttachment();
 		 //service.sendEmailWithRichContent();
 		service.sendEmailWithTemplate();
+		//few lines addded.
 	}
 }
