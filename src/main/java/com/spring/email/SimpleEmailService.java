@@ -47,6 +47,7 @@ public class SimpleEmailService {
 		helper.addAttachment("coupon.png", fileSystemResource);
 		mailSender.send(message);
 	}
+	//hotfix commit 2..
 	
 	public void sendEmailWithRichContent() throws MessagingException {
 		MimeMessage message=mailSender.createMimeMessage();
