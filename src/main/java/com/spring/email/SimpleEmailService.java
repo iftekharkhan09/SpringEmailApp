@@ -25,8 +25,7 @@ public class SimpleEmailService {
 	public SimpleEmailService(TemplateEngine thymaleaf) {
 		this.thymaleaf=thymaleaf;
 	}
-	//Commit No 1 in Develop...
-	//Commit No 2 in Develop...
+	//commit 6 Added in master..
 
 	public void sendEmail() {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
