@@ -26,7 +26,7 @@ public class SimpleEmailService {
 	public SimpleEmailService(TemplateEngine thymaleaf) {
 		this.thymaleaf=thymaleaf;
 	}
-
+	//hotfix comment 2 added..
 
 	public void sendEmail() {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
