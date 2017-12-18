@@ -17,6 +17,7 @@ public class SimpleEmailService {
 	private final String sendTo="***************";
 	@Autowired
 	private JavaMailSenderImpl mailSender;
+	//hotfix comment 1 added..
 	
 	@Autowired
 	private TemplateEngine thymaleaf;
