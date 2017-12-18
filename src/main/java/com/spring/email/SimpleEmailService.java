@@ -19,6 +19,8 @@ public class SimpleEmailService {
 	private JavaMailSenderImpl mailSender;
 	@Autowired
 	private TemplateEngine thymaleaf;
+	
+	//Line 1 Added in develop..
 
 	@Autowired
 	public SimpleEmailService(TemplateEngine thymaleaf) {
