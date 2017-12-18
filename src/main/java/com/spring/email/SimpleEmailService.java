@@ -17,9 +17,6 @@ public class SimpleEmailService {
 	private final String sendTo="***************";
 	@Autowired
 	private JavaMailSenderImpl mailSender;
-	//hotfix comment 1 added..
-	
-	//experiment comment 1 added..
 	
 	@Autowired
 	private TemplateEngine thymaleaf;
@@ -28,7 +25,6 @@ public class SimpleEmailService {
 	public SimpleEmailService(TemplateEngine thymaleaf) {
 		this.thymaleaf=thymaleaf;
 	}
-	//hotfix comment 2 added..
 
 	public void sendEmail() {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
@@ -37,8 +33,7 @@ public class SimpleEmailService {
 		simpleMailMessage.setText("This is a test mail");
 		mailSender.send(simpleMailMessage);
 	}
-	
-	//experiment comment 2 added..
+
 	
 	public void sendEmailWithAttachment() throws MessagingException {
 		MimeMessage message = mailSender.createMimeMessage();
@@ -67,7 +62,6 @@ public class SimpleEmailService {
 		mailSender.send(message);
 	}	
 	
-	//babu added...
 	
 	public void sendEmailWithTemplate() throws MessagingException {
 		Context context=new Context();
