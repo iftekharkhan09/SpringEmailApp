@@ -71,4 +71,5 @@ public class SimpleEmailService {
 		messageHelper.addInline("coupons", fileSystemResource);
 		mailSender.send(message);
 	}
+	//Lines 3 Added in master...
 }
