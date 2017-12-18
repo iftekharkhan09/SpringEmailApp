@@ -13,17 +13,16 @@ import org.thymeleaf.context.Context;
 
 @Component("simpleEmailService")
 public class SimpleEmailService {
-	private final String attachmentPath="/Users/iftekharahmedkhan/Documents/coupons.png";
-	private final String sendTo="***************";
+	private final String attachmentPath = "/Users/iftekharahmedkhan/Documents/coupons.png";
+	private final String sendTo = "***************";
 	@Autowired
 	private JavaMailSenderImpl mailSender;
-	
 	@Autowired
 	private TemplateEngine thymaleaf;
-	
+
 	@Autowired
 	public SimpleEmailService(TemplateEngine thymaleaf) {
-		this.thymaleaf=thymaleaf;
+		this.thymaleaf = thymaleaf;
 	}
 
 	public void sendEmail() {
@@ -34,7 +33,6 @@ public class SimpleEmailService {
 		mailSender.send(simpleMailMessage);
 	}
 
-	
 	public void sendEmailWithAttachment() throws MessagingException {
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
@@ -46,36 +44,31 @@ public class SimpleEmailService {
 		helper.addAttachment("coupon.png", fileSystemResource);
 		mailSender.send(message);
 	}
-	
-	//master commit babu added...
 
-	
 	public void sendEmailWithRichContent() throws MessagingException {
-		MimeMessage message=mailSender.createMimeMessage();
-		MimeMessageHelper messageHelper=new MimeMessageHelper(message,true);
-		messageHelper.setText("<html><body><h1>Hi !</h1><img src='cid:logo'></html></body>",true);
-		FileSystemResource fileSystemResource=new FileSystemResource(attachmentPath);
+		MimeMessage message = mailSender.createMimeMessage();
+		MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
+		messageHelper.setText("<html><body><h1>Hi !</h1><img src='cid:logo'></html></body>", true);
+		FileSystemResource fileSystemResource = new FileSystemResource(attachmentPath);
 		messageHelper.setTo("iftekharkhan245@gmail.com");
 		messageHelper.setFrom("no-reply@gmail.com");
 		messageHelper.setSubject("Test Mail");
 		messageHelper.addInline("logo", fileSystemResource);
 		mailSender.send(message);
-	}	
-	
-	
+	}
+
 	public void sendEmailWithTemplate() throws MessagingException {
-		Context context=new Context();
+		Context context = new Context();
 		context.setVariable("name", "harry");
-		String emailMsg=thymaleaf.process("email-template", context);
-		MimeMessage message=mailSender.createMimeMessage();
-		MimeMessageHelper messageHelper=new MimeMessageHelper(message,true);
-		messageHelper.setText(emailMsg,true);
-		FileSystemResource fileSystemResource=new FileSystemResource(attachmentPath);
+		String emailMsg = thymaleaf.process("email-template", context);
+		MimeMessage message = mailSender.createMimeMessage();
+		MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
+		messageHelper.setText(emailMsg, true);
+		FileSystemResource fileSystemResource = new FileSystemResource(attachmentPath);
 		messageHelper.setTo("*******************");
 		messageHelper.setFrom("no-reply@gmail.com");
 		messageHelper.setSubject("Test Mail");
 		messageHelper.addInline("coupons", fileSystemResource);
 		mailSender.send(message);
 	}
-	//master change added..
 }

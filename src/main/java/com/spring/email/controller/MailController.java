@@ -15,12 +15,6 @@ public class MailController {
 		// service.sendEmailWithAttachment();
 		 //service.sendEmailWithRichContent();
 		service.sendEmailWithTemplate();
-		//few lines addded.
 		
-		//hotfix sunny added.
-		
-		//hotfix iftekhar 1 added..
-		
-		//hotfix iftekhar 2 added..
 	}
 }

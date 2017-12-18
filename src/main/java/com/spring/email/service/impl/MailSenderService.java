@@ -13,9 +13,6 @@ import org.thymeleaf.spring3.templateresolver.SpringResourceTemplateResolver;
 public class MailSenderService {
 	private final String mailId = "********************";
 	private final String password = "*********************";
-	//lines added...
-	
-	//master Added...
 
 	@Bean
 	public JavaMailSenderImpl mailSender() {
@@ -34,7 +31,6 @@ public class MailSenderService {
 		mailSender.setJavaMailProperties(javaMailProperties);
 		return mailSender;
 	}
-	//master sunny added.
 
 	@Bean
     public SpringResourceTemplateResolver htmlTemplateResolver(){
