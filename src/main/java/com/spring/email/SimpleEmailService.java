@@ -47,6 +47,8 @@ public class SimpleEmailService {
 		helper.addAttachment("coupon.png", fileSystemResource);
 		mailSender.send(message);
 	}
+	
+	//master commit babu added...
 
 	
 	public void sendEmailWithRichContent() throws MessagingException {
