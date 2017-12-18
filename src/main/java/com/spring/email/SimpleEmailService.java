@@ -38,6 +38,8 @@ public class SimpleEmailService {
 		mailSender.send(simpleMailMessage);
 	}
 	
+	//experiment comment 2 added..
+	
 	public void sendEmailWithAttachment() throws MessagingException {
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message, true);
