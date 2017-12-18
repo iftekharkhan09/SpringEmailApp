@@ -19,11 +19,15 @@ public class SimpleEmailService {
 	private JavaMailSenderImpl mailSender;
 	@Autowired
 	private TemplateEngine thymaleaf;
+	
+	//Line 1 Added in develop..
 
 	@Autowired
 	public SimpleEmailService(TemplateEngine thymaleaf) {
 		this.thymaleaf = thymaleaf;
 	}
+	
+	//Line 2 Added in develop..
 
 	public void sendEmail() {
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
